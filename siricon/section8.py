@@ -1,15 +1,13 @@
-s = """\
-Hi $name.
+import csv
 
-$contents
-"""
+with open('test.csv','w') as csv_file:
+    fieldnames = ['Name','Count']
+    writer = csv.DictWriter(csv_file,fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({'Name': 'A', 'Count': '1'})
+    writer.writerow({'Name': 'B', 'Count': '2'})
 
-with open('test.txt', 'w+') as f:
-    f.write(s)
-    f.seek(0)
-    print(f.read())
-    
-
-
-
-
+with open('test.csv', 'r') as csv_file:
+    reader = csv.DictReader(csv_file)
+    for row in reader:
+        print(row['Name'], row['Count'])  
