@@ -61,7 +61,7 @@ v = np.random.normal(2, 0.5, 10000)
 
 plt.hist(v, bins=50, density=1)
 plt.show()
-"""
+
 
 ##########################################################
 # pandasの練習
@@ -89,6 +89,6 @@ print(df.T)
 import pandas_datareader
 s = pandas_datareader.data.DataReader('AAPL', 'yahoo', '2014-01-01')
 print(s)
-
+"""
 
 # matplotlibの使い方
