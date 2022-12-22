@@ -1,1 +1,1 @@
-print(s[0])
+print('\n')
